@@ -20,7 +20,7 @@ const players = ref([
     actualScore: 0,
   },
 ])
-console.log(players.value[1])
+console.log(players.value[0])
 </script>
 
 <template>
@@ -46,14 +46,17 @@ console.log(players.value[1])
         </div>
 
         <div class="buttonScore">
-          <button @click="infos.actualScore = infos.actualScore + 1">
-            add 1 point
+          <button
+            @click="infos.actualScore = infos.actualScore + 1"
+            class="opacity"
+          >
+            Add 1 point
           </button>
           <button @click="infos.actualScore = infos.actualScore + 2">
-            add 2 points
+            Add 2 points
           </button>
           <button @click="infos.actualScore = infos.actualScore + 5">
-            add 5 points
+            Add 5 points
           </button>
         </div>
       </div>
@@ -137,6 +140,10 @@ button:hover {
   background-color: #fb7041;
   color: white;
   transform: scale(1.2);
+  cursor: pointer;
+}
+button:active {
+  opacity: 0.5;
 }
 .reset button {
   border-radius: 5px;
