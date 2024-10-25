@@ -1,0 +1,11 @@
+@import './base.css';
+
+h1,
+h2,
+h4,
+p {
+  font-family: play, sans-serif;
+}
+h3 {
+  font-family: Playpen Sans;
+}
